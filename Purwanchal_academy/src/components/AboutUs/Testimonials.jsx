@@ -26,7 +26,6 @@ const Testimonials = () => {
     return <p>Loading testimonials...</p>;
   }
 
- 
   const parentTestimonials = testimonials.filter((testimonial) => testimonial.post === "teacher");
 
   return (
@@ -43,7 +42,7 @@ const Testimonials = () => {
                 <FaQuoteLeft className="text-4xl mx-auto" />
               </div>
               <div className="mb-4">
-                <p className="text-lg text-gray-600">{`"${stripHTML(testimonial.description)}"`}</p>
+                <p className="text-lg text-gray-600">{stripHTML(testimonial.description)}</p>
               </div>
               <div className="flex items-center mt-4">
                 <img

@@ -11,7 +11,6 @@ const StudentTestimonials = () => {
     const fetchTestimonials = async () => {
       try {
         const response = await axios.get('http://127.0.0.1:8000/api/testimonial/');
-        
         const studentTestimonials = response.data.filter((testimonial) => testimonial.post === "student");
         setTestimonials(studentTestimonials);
       } catch (error) {
@@ -42,7 +41,7 @@ const StudentTestimonials = () => {
                 <FaQuoteLeft className="text-4xl mx-auto" />
               </div>
               <div className="mb-4">
-                <p className="text-lg text-gray-600">{`"${stripHTML(testimonial.description)}"`}</p>
+                <p className="text-lg text-gray-600">{stripHTML(testimonial.description)}</p>
               </div>
               <div className="flex items-center mt-4">
                 <img
